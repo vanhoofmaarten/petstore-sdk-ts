@@ -2,16 +2,12 @@
   "compilerOptions": {
     "declaration": true,
     "target": "esnext",
-    "module": "esnext",
+    "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "dist",
-    "rootDir": "src",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": ".",
   },
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
 }

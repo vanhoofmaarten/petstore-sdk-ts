@@ -13,7 +13,7 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "generate": "npx @openapitools/openapi-generator-cli generate -i petstore.yml -g typescript-axios -o src/ -c generator-config.json --skip-validate-spec && rimraf src/package.json && rimraf src/tsconfig.json && rimraf src/git_push.sh",
+    "generate": "rimraf src && rimraf dist && npx @openapitools/openapi-generator-cli generate -i petstore.yml -g typescript-axios -o src/ -c generator-config.json --enable-post-process-file && rimraf src/package.json && rimraf src/tsconfig.json && rimraf src/git_push.sh",
     "build": "tsc --outDir dist/",
     "prepublishOnly": "npm run build"
   },
@@ -23,6 +23,6 @@
   "devDependencies": {
     "@types/node": "^12.12.25",
     "rimraf": "^3.0.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   }
 }

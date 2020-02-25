@@ -1,3 +1,4 @@
+"use strict";
 // tslint:disable
 /**
  * Swagger Petstore
@@ -10,15 +11,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 // Some imports not used depending on template conditions
 // @ts-ignore
-import globalAxios from 'axios';
-export const BASE_PATH = "http://petstore.swagger.io/v1".replace(/\/+$/, "");
+const axios_1 = require("axios");
+exports.BASE_PATH = "http://petstore.swagger.io/v1".replace(/\/+$/, "");
 /**
  *
  * @export
  */
-export const COLLECTION_FORMATS = {
+exports.COLLECTION_FORMATS = {
     csv: ",",
     ssv: " ",
     tsv: "\t",
@@ -29,8 +31,8 @@ export const COLLECTION_FORMATS = {
  * @export
  * @class BaseAPI
  */
-export class BaseAPI {
-    constructor(configuration, basePath = BASE_PATH, axios = globalAxios) {
+class BaseAPI {
+    constructor(configuration, basePath = exports.BASE_PATH, axios = axios_1.default) {
         this.basePath = basePath;
         this.axios = axios;
         if (configuration) {
@@ -39,6 +41,7 @@ export class BaseAPI {
         }
     }
 }
+exports.BaseAPI = BaseAPI;
 ;
 /**
  *
@@ -46,10 +49,11 @@ export class BaseAPI {
  * @class RequiredError
  * @extends {Error}
  */
-export class RequiredError extends Error {
+class RequiredError extends Error {
     constructor(field, msg) {
         super(msg);
         this.field = field;
         this.name = "RequiredError";
     }
 }
+exports.RequiredError = RequiredError;

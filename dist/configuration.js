@@ -1,3 +1,4 @@
+"use strict";
 // tslint:disable
 /**
  * Swagger Petstore
@@ -10,7 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-export class Configuration {
+Object.defineProperty(exports, "__esModule", { value: true });
+class Configuration {
     constructor(param = {}) {
         this.apiKey = param.apiKey;
         this.username = param.username;
@@ -20,3 +22,4 @@ export class Configuration {
         this.baseOptions = param.baseOptions;
     }
 }
+exports.Configuration = Configuration;

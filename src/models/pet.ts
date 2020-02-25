@@ -13,5 +13,30 @@
 
 
 
-export * from './api/pets-api';
+/**
+ * 
+ * @export
+ * @interface Pet
+ */
+export interface Pet {
+    /**
+     * 
+     * @type {number}
+     * @memberof Pet
+     */
+    id: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pet
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof Pet
+     */
+    tag?: string;
+}
+
 

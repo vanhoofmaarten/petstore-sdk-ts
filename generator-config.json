@@ -1,7 +1,9 @@
 {
+	"apiPackage": "api",
+	"modelPackage": "models",
   "supportsES6": true,
   "npmName": "petstore-sdk-ts",
   "npmRepository": "git@github.com:vanhoofmaarten/petstore-sdk-ts.git",
   "withInterfaces": true,
-  "typescriptThreePlus": true
+	"withSeparateModelsAndApi": true
 }
